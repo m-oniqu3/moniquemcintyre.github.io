@@ -15,16 +15,76 @@
     <title>Monique McIntyre</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         html {
             font-family: "Source Code Pro", monospace;
         }
 
+        body {
+            padding: 20px;
+        }
+
+        section::after{
+            content: '-';
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            padding: 2rem 0;
+        }
+
         h1 {
             color: indigo;
+            font-size: large;
         }
 
         h2 {
             color: green;
+            font-size: smaller;
+        }
+
+ul{
+    list-style: lower-roman;
+    list-style-position: inside;
+
+    
+}
+li::marker, #spacer {
+  color: gray
+  ;
+  font-size: 1em;
+}
+
+        dt {
+            font-size: smaller;
+            font-weight: 500;
+            color: orange;
+        }
+
+        p,
+        li,
+        dd {
+            font-size: smaller;
+        }
+
+
+        article,ul,
+        dl {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+
+        #group {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
         }
     </style>
 </head>
@@ -34,7 +94,10 @@
 
     <section id="intro">
         <article>
-            <h1>monique mcintyre</h1>
+            <div id="group">
+                <h1>monique mcintyre</h1>
+                <h2>frontend developer</h2>
+            </div>
             <p>
                 developer; writer; designer (not official, i just know how to use figma a bit.)
             </p>
@@ -44,12 +107,13 @@
 
 
     <section id="about">
-     
+
         <article>
-            <h2>about me</h2>
-               <p>
-            here's a bit about me; interests; likes; dislikes; hobbies
-        </p>
+            <div>
+                <h2>about me</h2>
+            <p>
+                here's a bit about me; interests; likes; dislikes; hobbies
+            </p></div>
 
             <ul>
                 <li>frontend developer</li>
@@ -61,8 +125,8 @@
                 <li>loves learning languages, anime and reading</li>
                 <li>writes on medium</li>
                 <li>designs in figma</li>
-                <li>can build apps ended to end</li>
-                <li>builds with a user-facing in ming</li>
+                <li>can build apps end to end</li>
+                <li>builds with a user-facing mindset</li>
                 <li>always keeps users in mind</li>
                 <li>i hate Inter font</li>
                 <li>Big Kyle Simpson fan (Thinks the reason he didn't get that job is because he doesn't know JS well)
@@ -72,23 +136,22 @@
                 <li>Loves pinterest</li>
                 <li>loves planning,reorganizing and shelving (will build an app for that soon)</li>
                 <li>loves minimalism (in tech)</li>
-                <li>favourite artist is the weekend)</li>
+                <li>favourite artist is the weekend</li>
 
             </ul>
         </article>
-
-
-
     </section>
 
 
 
     <section id="projects">
         <article>
-            <h2>
+           <div>
+             <h2>
                 projects
             </h2>
-            <p>here are some things i've built/design</p>
+            <p>here are some things i've built/designed</p>
+           </div>
 
             <dl>
                 <dt>JPMorganChase Redesign</dt>
@@ -98,8 +161,11 @@
                     <a href="https://www.figma.com/design/LUpoHsQOTITBBVd63ugM6W/jp-morgan-redesign?node-id=0-1&t=Y3s3QcIeHVBef7SW-1"
                         target="_blank">Link</a>
                 </dd>
+            </dl>
 
-                <br />
+            <p id='spacer'>*</p>
+            <dl>
+
 
                 <dt>Tuesday (Currently building)</dt>
                 <dd>A web app to save, curate list & discuss films.</dd>
@@ -107,14 +173,18 @@
                     responsible for the list feature)</dd>
                 <dd><a href="https://github.com/m-oniqu3/tuesday" target="_blank"">Link</a></dd>
             </dl>
+
+          
         </article>
     </section>
 
 
     <section id=" articles">
                         <article>
-                            <h2>articles; writing</h2>
+                          <div>
+                              <h2>articles; writing</h2>
                             <p>here's some of my work/pieces.</p>
+                          </div>
 
                             <dl>
                                 <dt>Why you need .catch() handlers</dt>
@@ -123,9 +193,11 @@
                                     <a href="https://medium.com/@ctrlaltmonique/rejection-propagation-in-promise-chains-75ce4bbf5907"
                                         target="_blank">Link</a>
                                 </dd>
+                                </dl>
 
-                                <br />
+                             <p id='spacer'>*</p>
 
+<dl>
                                 <dt>Creating Immutable Objects in JavaScript</dt>
                                 <dd>Straight from Kyle Simpson</dd>
                                 <dd>
@@ -133,7 +205,7 @@
                                         target="_blank">Link</a>
                                 </dd>
 
-                                <br />
+                                <p id='spacer'>*</p>
 
                                 <dt>How to Use React Hook Form + Zod with Next.js Server Actions</dt>
                                 <dd>A Step-by-Step Guide to Form Validation in Next.js </dd>
@@ -142,7 +214,7 @@
 
                                 </dd>
 
-                                <br />
+                               <p id='spacer'>*</p>
 
                                 <dt>Lexical this</dt>
                                 <dd>How this works in Arrow Functions
@@ -150,7 +222,7 @@
                                 <dd><a href="https://medium.com/@ctrlaltmonique/lexical-this-how-this-works-in-arrow-functions-100239be6550?sharedUserId=ctrlaltmonique"
                                         target="_blank">Link</a></dd>
 
-                                <br />
+                                <p id='spacer'>*</p>
                                 <dt>Unexpected ‘this’ </dt>
                                 <dd>Binding Exceptions with ‘this’ in JavaScript</dd>
                                 <dd>
@@ -158,31 +230,33 @@
                                         target="_blank">Link</a>
                                 </dd>
 
-                                <br />
+                                <p id='spacer'>*</p>
 
                                 <dt>‘this’ keyword in JavaScript</dt>
                                 <dd>Understanding JavaScript’s this Keyword</dd>
                                 <dd><a href="https://medium.com/@ctrlaltmonique/javascripts-this-all-makes-sense-now-0c3c1251283b?sharedUserId=ctrlaltmonique"
                                         target="_blank"">Link</a>
-                                </dd>
-                            </dl>
-                        </article>
+                </dd>
+            </dl>
+        </article>
     </section>
 
 
     <section id=" readings">
                                         <article>
-                                            <h2>2026 readings</h2>
+                                        <div>
+                                                <h2>2026 readings</h2>
 
                                             <p>my unforgettable recs (inspired by jaoa pinero -- ceo of amplemarket --
                                                 if you see this, love you!)</p>
+                                        </div>
 
                                             <dl>
                                                 <dt>Resilient Web Design</dt>
                                                 <dd> <a href="https://resilientwebdesign.com/" target="_blank">Link</a>
                                                 </dd>
 
-                                                <br />
+                                                <p id='spacer'>*</p>
 
                                                 <dt>How Browsers Load Websites</dt>
                                                 <dd>
@@ -190,11 +264,11 @@
                                                         target="_blank">Link</a>
                                                 </dd>
 
-                                                <br />
+                                                <p id='spacer'>*</p>
 
                                                 <dt>Just F*cking Use GO</dt>
                                                 <dd><a href="
-                https://blainsmith.com/articles/just-fucking-use-go/" target="_blank">Link</a></dd>
+https://blainsmith.com/articles/just-fucking-use-go/" target="_blank">Link</a></dd>
                                             </dl>
                                         </article>
     </section>
@@ -202,30 +276,30 @@
 
     <section id="contact">
         <article>
-            <h2>contact</h2>
-            <p>reach out to me!</p>
+            <div><h2>contact</h2>
+            <p>reach out to me!</p></div>
 
             <dl>
                 <dt>email</dt>
                 <dd>moniquecmcintyre@gmail.com</dd>
 
-                <br/>
-                
+                <p id='spacer'>*</p>
+
                 <dt>x (twitter)</dt>
                 <dd>atomiceight_</dd>
 
-                <br/>
-                
+                <p id='spacer'>*</p>
+
                 <dt>github</dt>
                 <dd>m-oniqu3</dd>
 
-                <br/>
-                
+                <p id='spacer'>*</p>
+
                 <dt>medium</dt>
                 <dd>ctrlaltmonique</dd>
 
-                <br/>
-                
+                <p id='spacer'>*</p>
+
                 <dt>substack</dt>
                 <dd>moniquemcintyre</dd>
             </dl>
